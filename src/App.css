@@ -1,38 +1,107 @@
-.App {
+/* General Styles */
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+/* Title Styling */
+.events-title {
   text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.events-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: magenta;
+  margin: 10px auto;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Events List Container */
+.events-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Event Box Layout */
+.event-box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.event-box:hover {
+  transform: scale(1.02);
+}
+
+/* Image Styling */
+.event-image {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Event Details */
+.event-details {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.event-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: magenta;
+}
+
+.event-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Z-Layout (Alternating) */
+.event-box.left {
+  flex-direction: row;
+}
+
+.event-box.right {
+  flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-box {
+      flex-direction: column;
+      text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .event-image {
+      width: 100%;
+  }
+
+  .event-details {
+      padding: 15px;
   }
 }

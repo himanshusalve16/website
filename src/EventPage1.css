@@ -1,0 +1,39 @@
+.event-page {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.event-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.event-description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./Teampage.css";
 
 const teamMembers = [
   { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg" },
