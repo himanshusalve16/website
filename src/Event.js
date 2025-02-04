@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import './App.css';
 
 const events = [
@@ -57,9 +58,28 @@ const events = [
     description2: 'Medical professionals guide donors and ensure safe and effective blood collection.',
   },
 ];
+=======
+import './Event.css';
+import Navbar from "./Navbar.js";
+import NSSFooter from "./NSSFooter.js";
+
+const Event = () => {
+  const events = [
+    { name: 'PRERNA', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'AARAMBH FOUNDATION WEEK', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'HAPPYTHON', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'INDEPENDENCE DAY', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'YOGA DAY', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'NATIONAL YOUTH DAY', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'REPUBLIC DAY', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'CLEANLINESS DRIVE', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+    { name: 'BLOOD DONATION CAMP', image: 'https://image.nssiitd.in/current_team/Faculty/Ankesh%20Jain_Innovation.png' },
+  ];
+>>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
 
 function App() {
   return (
+<<<<<<< HEAD
     <div className="events-container">
       <h2 className="events-title">EVENTS</h2>
       <div className="events-list">
@@ -71,11 +91,41 @@ function App() {
               <p className="event-description">{event.description1}</p>
               <p className="event-description">{event.description2}</p>
             </div>
+=======
+    <div>
+      < Navbar/>
+      <div className="events-container">
+        {/* Events Section */}
+        <section>
+          <h2 className="events-title">EVENTS</h2>
+          <div className="events-grid">
+            {events.map((event) => (
+              <div key={event.name} className="event-card">
+                <img
+                  src={event.image}
+                  alt={event.name}
+                  className="event-image"
+                />
+                <div className="event-overlay">
+                  <h3 className="event-name">{event.name}</h3>
+                </div>
+              </div>
+            ))}
+>>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
           </div>
         ))}
       </div>
+<<<<<<< HEAD
     </div>
+=======
+      < NSSFooter/>
+      </div>
+>>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default Event;
+>>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
