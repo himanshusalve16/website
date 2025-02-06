@@ -1,84 +1,41 @@
-/* CSS Styles */
-.events-container {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-.events-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
-.events-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.event-box {
-  display: flex;
-  align-items: center;
-  width: 90%;
-  max-width: 900px;
-  padding: 20px;
-  background: #666;
-  border-radius: 1rem;
-  box-shadow: 0 0 3rem #666;
-  transition: transform 0.3s ease-in-out;
-}
-
-.event-box:hover {
-  transform: scale(1.02);
-}
-
-.event-slider {
-  width: 50%;
-}
-
-.event-slide-image {
-  width: 90%;
-  height: auto;
-  border-radius: 1rem;
-  object-fit: cover;
-}
-
-.event-details {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-  color: #ddd;
-}
-
-.event-name {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ffae00;
-}
-
-.event-description {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.event-box.left {
-  flex-direction: row;
-}
-
-.event-box.right {
-  flex-direction: row-reverse;
-}
-
-@media (max-width: 768px) {
-  /* The parent container that holds both the gallery and description */
-  .event-box {
-    /* Use grid to create a vertical stack layout */
+/* General styles */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for events */
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Events section title */
+  .events-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .events-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: magenta;
+    margin: 5px auto;
+  }
+  
+  /* Grid layout for desktop */
+  .events-grid {
+    position: relative;
     display: grid;
     /* Create two rows: one for gallery, one for description */
     grid-template-rows: auto auto;
@@ -88,17 +45,27 @@
     width: 100%;
     /* Prevent any overflow issues */
     overflow: hidden;
-    /* Ensure padding is included in width calculations */
-    box-sizing: border-box;
   }
 
-  /* The image gallery/slider section */
-  .event-slider {
-    /* Place in the first row */
-    grid-row: 1;
-    /* Take up full width of parent */
+  .events-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    /* Prevent content from overflowing */
+    height: 100%;
+    background: url('./Images/NSS_BG.webp') no-repeat center center;
+    background-size: cover;
+    filter: blur(10px);  /* Apply blur effect */
+    transform: scale(1.1); /* Prevents visible edges due to blur */
+    z-index: -1;
+    opacity: 0.6; /* Adjust transparency */
+  }
+  
+  /* Event card styling */
+  .event-card {
+    position: relative;
+    border-radius: 15px;
     overflow: hidden;
     /* Maintain aspect ratio if needed */
     aspect-ratio: 16/9;
