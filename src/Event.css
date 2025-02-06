@@ -95,7 +95,6 @@ body {
     /* Prevent text from overflowing */
     max-width: 100%;
   }
-}
 
 .event-slider .slick-prev,
 .event-slider .slick-next {
