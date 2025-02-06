@@ -1,33 +1,19 @@
-/* General Styles */
-body {
-  background-color: #121212;
-  color: white;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+/* CSS Styles */
+.events-container {
+  background-color: #ffffff;
+  color: #000000;
   padding: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Title Styling */
 .events-title {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
-  position: relative;
 }
 
-.events-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: magenta;
-  margin: 10px auto;
-  border-radius: 5px;
-}
-
-/* Events List Container */
 .events-list {
   display: flex;
   flex-direction: column;
@@ -35,17 +21,15 @@ body {
   gap: 40px;
 }
 
-/* Event Box Layout */
 .event-box {
   display: flex;
   align-items: center;
   width: 90%;
   max-width: 900px;
   padding: 20px;
-  background: #1e1e1e;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+  background: #666;
+  border-radius: 1rem;
+  box-shadow: 0 0 3rem #666;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -53,35 +37,36 @@ body {
   transform: scale(1.02);
 }
 
-/* Image Styling */
-.event-image {
+.event-slider {
   width: 50%;
+}
+
+.event-slide-image {
+  width: 90%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 1rem;
   object-fit: cover;
 }
 
-/* Event Details */
 .event-details {
   flex: 1;
   padding: 20px;
   text-align: left;
+  color: #ddd;
 }
 
 .event-name {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: magenta;
+  color: #ffae00;
 }
 
 .event-description {
   font-size: 16px;
   line-height: 1.5;
-  color: #ddd;
 }
 
-/* Z-Layout (Alternating) */
 .event-box.left {
   flex-direction: row;
 }
@@ -90,91 +75,73 @@ body {
   flex-direction: row-reverse;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  /* The parent container that holds both the gallery and description */
   .event-box {
-      flex-direction: column;
-      text-align: center;
-  }
-<<<<<<< HEAD
-
-=======
-  
-  /* Container for events */
-  .events-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  /* Events section title */
-  .events-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .events-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: magenta;
-    margin: 5px auto;
-  }
-  
-  /* Grid layout for desktop */
-  .events-grid {
-    position: relative;
+    /* Use grid to create a vertical stack layout */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 5rem;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
+    /* Create two rows: one for gallery, one for description */
+    grid-template-rows: auto auto;
+    /* Add some space between the gallery and description */
+    gap: 20px;
+    /* Ensure the container takes full width */
     width: 100%;
-    gap: 8rem;
-    max-width: 900px;
-    width: 100%;
-    justify-content: center;
-    z-index: 1;
+    /* Prevent any overflow issues */
     overflow: hidden;
+    /* Ensure padding is included in width calculations */
+    box-sizing: border-box;
   }
 
-  .events-grid::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+  /* The image gallery/slider section */
+  .event-slider {
+    /* Place in the first row */
+    grid-row: 1;
+    /* Take up full width of parent */
     width: 100%;
-    height: 100%;
-    background: url('./Images/NSS_BG.webp') no-repeat center center;
-    background-size: cover;
-    filter: blur(10px);  /* Apply blur effect */
-    transform: scale(1.1); /* Prevents visible edges due to blur */
-    z-index: -1;
-    opacity: 0.6; /* Adjust transparency */
-  }
-  
-  /* Event card styling */
-  .event-card {
-    position: relative;
-    border-radius: 15px;
+    /* Prevent content from overflowing */
     overflow: hidden;
-    width: 100%;
-    max-width: 250px;
-    height: 180px;
-  }
-  
->>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
-  .event-image {
-      width: 100%;
+    /* Maintain aspect ratio if needed */
+    aspect-ratio: 16/9;
   }
 
+  /* The container for the description section */
   .event-details {
-      padding: 15px;
+    /* Place in the second row */
+    grid-row: 2;
+    /* Take up full width of parent */
+    width: 100%;
+    /* Add some padding around the content */
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
   }
+
+  /* The actual description text */
+  .event-description {
+    /* Set comfortable reading size */
+    font-size: 14px;
+    line-height: 1.6;
+    /* Ensure text wraps properly */
+    word-wrap: break-word;
+    /* Prevent text from overflowing */
+    max-width: 100%;
+  }
+}
+
+.event-slider .slick-prev,
+.event-slider .slick-next {
+    /* Position arrows on top of the images */
+    z-index: 1;
+}
+
+.event-slider .slick-prev {
+    /* Move the left arrow onto the image */
+    left: 20px;
+}
+
+.event-slider .slick-next {
+    /* Move the right arrow onto the image */
+    right: 20px;
 }
