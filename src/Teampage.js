@@ -1,10 +1,7 @@
 import React from "react";
 import "./Teampage.css";
-<<<<<<< HEAD
-=======
 import Navbar from "./Navbar.js";
 import NSSFooter from "./NSSFooter.js";
->>>>>>> e61eb8835da42b73f8e060a9d784d3aa84c058b1
 
 const teamMembers = [
   { id: "incharge", name: "Dr. Amit Anurag", role: "Program Incharge", image: "https://image.nssiitd.in/current_team/Parth_Soni_Gsecy.jpg" },
