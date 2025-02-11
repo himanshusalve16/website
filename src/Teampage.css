@@ -271,3 +271,28 @@ body {
   }
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.insta:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+
+.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
