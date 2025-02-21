@@ -79,6 +79,16 @@ const events = [
     description2: 'Volunteers clean public places and educate people about keeping surroundings clean.',
   },
   {
+    name: "SAHYOG",
+    images: [
+      "https://media.istockphoto.com/id/1497811046/photo/a-doctor-and-her-assistant-doctor-engaged-in-a-conversation-with-family-members-of-a-village.jpg?s=612x612&w=0&k=20&c=tlxfJh1vYnm5PrnHvID4vdxnrqXmjpiinIxhgM5UrSY=",
+      "https://media.istockphoto.com/id/1125843699/photo/real-estate-agent-with-group-of-villagers.jpg?s=612x612&w=0&k=20&c=E0EpqKdr4v59EMB1hfevF1QcwELQk0dvekJyLfIrpq0=",
+      "https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?s=612x612&w=0&k=20&c=CJsDJ1nIMKr5NPBQufc5eyjsbSV_3XhqgcQusavGXIk=",
+    ],
+    description1: "An education initiative to educate children about computers.",
+    description2: "Volunteers take initiative to teach children about computers.",
+  },
+  {
     name: 'BLOOD DONATION CAMP',
     images: [
       "/images/BloodDonation/DSC04275.JPG",

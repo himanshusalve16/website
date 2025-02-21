@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Event.css';
 import Navbar from './Navbar.js';
 import NSSFooter from './NSSFooter.js';
+import {Link} from 'react-router-dom';
 
 function DomainReport() {
   const { labelreport } = useParams(); // Get labelreport from URL params
@@ -52,7 +53,18 @@ function DomainReport() {
         title : "Innovation Domain",
         events : [
           {
-            name: "Tech Expo",
+            name: "Prayas",
+            images: [
+              "/Clean/IMG_20241002_094126.jpg",
+      "/Clean/IMG_20241002_095147.jpg",
+      "/Clean/IMG_20241002_115904.jpg",
+            ],
+            description1: "A showcase of innovative projects and research.",
+            description2: "Students and professionals demonstrate their tech solutions.",
+          },
+
+          {
+            name: "Socio Hackathon",
             images: [
               "/Clean/IMG_20241002_094126.jpg",
       "/Clean/IMG_20241002_095147.jpg",
@@ -62,6 +74,7 @@ function DomainReport() {
             description2: "Students and professionals demonstrate their tech solutions.",
           },
         ],
+        
     },
   
       societyreport: {
@@ -157,7 +170,9 @@ function DomainReport() {
                 <h3 className="event-name">{event.name}</h3>
                 <p className="event-description">{event.description1}</p>
                 <p className="event-description">{event.description2}</p>
-                <button className="event-report-btn">Event Report</button>
+                <Link to={`/event-report/${event.name}`} className="event-report-btn">
+                  Event Report
+                </Link>
               </div>
             </div>
           ))}
