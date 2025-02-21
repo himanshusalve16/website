@@ -32,7 +32,7 @@ function EventReport() {
     "SAHYOG": {
       "2023-24": {
         type: "pdf",
-        url: "/PDFs/Sahyog-2023-24-Report.pdf"
+        url: "/PDFs/Sahyog-2023-24.pdf"
       },
       "2024-25": {
         type: "text",

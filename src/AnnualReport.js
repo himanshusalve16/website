@@ -20,7 +20,7 @@ function AnnualReport() {
   const navigateToYearReport = () => {
     if (selectedYear) {
         // Redirect to the year-specific report route
-        navigate(`/annnualreport/${selectedYear}`);
+        navigate(`/PDFs/AnnualReport${selectedYear}`);
     }
 };
 
