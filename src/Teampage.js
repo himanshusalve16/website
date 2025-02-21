@@ -123,7 +123,7 @@ const Teampage = () => {
         <label>Select Year: </label>
         <select value={selectedYear} onChange={handleYearChange}>
           <option value={2024}>2024-25</option>
-          <option value={2023}>2023-23</option>
+          <option value={2023}>2023-24</option>
           {/* Add other options here for different years */}
         </select>
       </div>

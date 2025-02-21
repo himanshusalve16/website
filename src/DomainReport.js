@@ -52,7 +52,18 @@ function DomainReport() {
         title : "Innovation Domain",
         events : [
           {
-            name: "Tech Expo",
+            name: "Prayas",
+            images: [
+              "/Clean/IMG_20241002_094126.jpg",
+      "/Clean/IMG_20241002_095147.jpg",
+      "/Clean/IMG_20241002_115904.jpg",
+            ],
+            description1: "A showcase of innovative projects and research.",
+            description2: "Students and professionals demonstrate their tech solutions.",
+          },
+
+          {
+            name: "Socio Hackathon",
             images: [
               "/Clean/IMG_20241002_094126.jpg",
       "/Clean/IMG_20241002_095147.jpg",
@@ -62,6 +73,7 @@ function DomainReport() {
             description2: "Students and professionals demonstrate their tech solutions.",
           },
         ],
+        
     },
   
       societyreport: {
