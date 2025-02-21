@@ -42,7 +42,7 @@ const NSSUnit = () => {
   const handleNavigate = (label) => {
     if (label === "Instagram Followers") {
       // Redirect to Instagram page in a new tab
-      window.open("https://www.instagram.com/yourusername", "_blank");
+      window.open("https://www.instagram.com/nssrbu", "_blank");
     } else {
     const formattedLabel = label.toLowerCase().replace(/\s+/g, "");
     navigate(`/reach/${formattedLabel}report`);
